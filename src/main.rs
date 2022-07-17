@@ -7,7 +7,7 @@ use chrono::prelude::Local;
 use std::{fs, io, thread, time};
 
 const LA_PATH: &str = "/proc/loadavg";
-const LINK_PATH: &str = "/sys/class/net/wlp3s0/operstate";
+const LINK_PATH: &str = env!("LINK_PATH");
 const PROGRESS: [char; 8] = ['▁', '▂', '▃', '▄', '▅', '▆', '▇', '█'];
 
 fn load_average() -> io::Result<Vec<f64>> {
