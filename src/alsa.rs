@@ -4,7 +4,7 @@
 
 mod alsa_extern {
     #[link(name = "asound")]
-    #[link(name = "alsa", kind = "static")]
+    #[link(name = "alsa")]
     extern "C" {
         pub fn get_volume() -> i32;
     }
